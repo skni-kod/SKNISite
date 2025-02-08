@@ -28,7 +28,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: skni_site
     healthcheck:
-      test: pg_isready
+      test: pg_isready -U postgres
       interval: 60s
       retries: 3
       start_period: 10s
