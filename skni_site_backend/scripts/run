@@ -1,0 +1,15 @@
+#!/bin/bash
+# Function to parse environment variables
+function parse_env_var() {
+    echo ${!1} | xargs
+}
+
+echo "Collecting static files..."
+python manage.py collectstatic --noinput
+
+# Apply any unapplied database migrations
+echo "Running any unapplied Django migrations..."
+python manage.py migrate
+
+# Start Gunicorn server
+exec gunicorn --bind 0.0.0.0:8000 SKNISite.wsgi:application

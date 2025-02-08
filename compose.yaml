@@ -1,0 +1,44 @@
+services:
+  backend:
+    build: skni_site_backend
+    ports:
+      - "8000:8000"
+    networks:
+      - skni_site
+    develop:
+      watch:
+        - action: sync
+          path: ./skni_site_backend
+          target: /app
+        - action: rebuild
+          path: ./skni_site_backend/poetry.lock
+        - action: rebuild
+          path: ./skni_site_backend/pyproject.toml
+    depends_on:
+      db:
+          condition: service_healthy
+  db:
+    image: postgres:15.7
+    ports:
+      - 5432:5432
+    volumes:
+      - skni_site_db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: skni_site
+    healthcheck:
+      test: pg_isready
+      interval: 60s
+      retries: 3
+      start_period: 10s
+      timeout: 10s
+    networks:
+      - skni_site
+
+volumes:
+    skni_site_db_data:
+
+networks:
+  skni_site:
+    driver: bridge
