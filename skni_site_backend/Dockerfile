@@ -25,5 +25,5 @@ RUN poetry install --no-root
 COPY . /app/
 
 FROM base
-CMD ["dos2unix", "scripts/run.sh"]
+CMD ["dos2unix", "scripts/run"]
 CMD ["/bin/bash", "scripts/run"]
