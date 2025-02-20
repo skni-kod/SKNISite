@@ -1,4 +1,16 @@
 {
+  "Navbar": {
+    "about": "O nas",
+    "news": "Aktualności",
+    "articles": "Artykuły",
+    "projects": "Projekty",
+    "ThemeToggle": {
+      "switchTheme": "Zmień motyw",
+      "light": "Jasny",
+      "dark": "Ciemny",
+      "system": "Systemowy"
+    }
+  },
   "HomePage": {
     "title": "Witaj świecie!"
   }
