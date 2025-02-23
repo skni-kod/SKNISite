@@ -1,32 +1,33 @@
-"use client";
-
 import * as React from "react";
+import { useTranslations } from "next-intl";
 import {Text} from "./text"
 import {Button} from "./button";
+import Link  from "next/link";
 
 const Equipment: React.FC = () => {
-    return <div className="flex h-[600px] w-full bg-cover bg-center justify-center" style = {{backgroundImage: "url('equipment.jpg')" }}>
-        <div className="max-w-[600px] w-4/5 mt-[100px] mb-[100px]">
-            <Text variant="h1" className="pb-[30px] text-white text-[48px]">
-                Potrzebujesz sprzętu?
+    const t = useTranslations('HomePage.Equipment');
+
+    return(
+    <div className="flex min-h-[600px] w-full bg-cover bg-center justify-center" style = {{backgroundImage: "url('equipment.jpg')" }}>
+        <div className="max-w-[600px] w-4/5 space-y-8 mt-16 mb-16">
+            <Text variant="h1" className="text-white">
+                {t("title")}
             </Text>
-            <Text variant="p" className="text-white text-[18px]">
-                Nasze koło posiada specjalistyczny sprzęt! Druk 3D czy rozwijanie gier na platformę VR to dla nas drobnostka. Dzięki temu, że posiadamy własny sprzęt możemy bez problemu rozwijać nasze umiejętności w tych dziedzinach.
+            <Text variant="h4" className="text-white">
+                {t("paragraph1")}
             </Text>
-            <Text variant="p" className="pb-[40px] text-white text-[18px]">
-                Posiadamy także specjalistyczne lutownice, moduły arduino oraz raspberry, sprzęt retro, drukarkę 3D, gogle VR.
+            <Text variant="h4" className="text-white">
+                {t("paragraph2")}
             </Text>
-            <a href="/about">
-                <Button className="bg-white rounded-3xl border-[2px] text-[#55ACEE] text-[18px]
-                py-[10px] px-[40px] h-auto w-auto
-                hover:bg-transparent hover:text-white hover:border-white duration-300"
-                >
-                        Zobacz więcej
+            <Link href="/about" className="block">
+                <Button asChild variant="default" size="lg" className="bg-white rounded-3xl border-[2px] text-[#55ACEE]
+                hover:bg-transparent hover:text-white hover:border-white duration-300">
+                    <span>{t("button")}</span>
                 </Button>
-            </a>
+            </Link>
 
         </div>
-    </div>;
-};
+    </div>
+)};
 
-export default Equipment;
+export {Equipment};
