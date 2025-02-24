@@ -15,7 +15,7 @@ import { MenuIcon } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 import { LogoLink } from "./logo-link";
-import { NavLinks } from "./navlink";
+import { NavLinks } from "./navlinks";
 
 const Navbar = () => {
   return (

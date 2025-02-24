@@ -6,19 +6,20 @@ const LogoLink = () => {
   return (
     <Link href="/">
       <Image
-        src="https://kod.prz.edu.pl/img/logo_small.35e34fc9.png"
+        src="/images/logo_small_light.png"
+        className="block dark:hidden"
         alt="logo"
         priority
-        style={{
-          maxWidth: "100%",
-          minHeight: "40px",
-          minWidth: "110px",
-          width: "auto",
-          height: "auto",
-          maxHeight: "60px",
-        }}
-        width={500}
-        height={300}
+        width={160}
+        height={59}
+      />
+      <Image
+        src="/images/logo_small_dark.png"
+        className="hidden dark:block"
+        alt="logo"
+        priority
+        width={160}
+        height={59}
       />
       <span className="sr-only">SKNI KOD</span>
     </Link>
