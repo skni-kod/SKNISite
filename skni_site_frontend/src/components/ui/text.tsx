@@ -25,6 +25,7 @@ const textVariants = cva("text-foreground", {
       largeText: "text-lg font-semibold",
       smallText: "text-sm font-medium leading-none",
       mutedText: "text-sm text-muted-foreground",
+      navText: "text-xl font-light",
     },
   },
   defaultVariants: {
@@ -52,6 +53,7 @@ const variantElementMap: Record<
   lead: "p",
   mutedText: "p",
   ul: "ul",
+  navText: "span",
 };
 
 export interface TextProps
