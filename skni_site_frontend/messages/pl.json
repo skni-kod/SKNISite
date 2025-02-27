@@ -11,7 +11,45 @@
       "system": "Systemowy"
     }
   },
-  "HomePage": {
-    "title": "Witaj świecie!"
+  "landing-page": {
+    "introduction": {
+      "name": "Studenckie Koło Naukowe Informatyków",
+      "description": "Celem pracy Koła jest poszerzenie wiedzy z dziedziny optymalnego rozwiązywania zagadnień programowania oraz poznawanie nowoczesnych technologii informatycznych. W ramach regularnych spotkań studenci samodzielnie przygotowują referaty oraz organizują wewnętrzne współzawodnictwo w rozwiązywaniu interesujących ich zagadnień."
+    },
+    "join-us": {
+      "section-title": "Sekcje w SKNI KOD",
+      "title": "Dołącz do naszego koła i zaangażuj się!",
+      "description1": "Jest wiele powodów aby dołączyć do SKNI KOD. Jednym z nich są sekcje! W każdej z nich realizowane są przeróżne projekty, które mogą Cię zainteresować. To Ty wybierasz do którego projektu chciałbyś dołączyć.",
+      "description2": "Dołącz już dziś - skontaktuj się z nami poprzez fanpage na facebooku lub przyjdź na spotkanie.",
+      "sections": {
+        "gamedev": {
+          "title": "Sekcja Game-Dev",
+          "description": "Sekcja zajmująca się tworzeniem gier komputerowych, głównie opartych o silnik Unity. Dodatkowo w pracy wykorzystuję technologię wirtualnej rzeczywistości."
+        },
+        "webdev": {
+          "title": "Sekcja Aplikacji Desktopowych Mobilnych i Webowych ",
+          "description": "Sekcja zajmująca się budową aplikacji na różnego rodzaju urządzenia, wykorzystując szeroką gamę technologii."
+        },
+        "electronics": {
+          "title": "Sekcja Elektroniki i Retro ",
+          "description": "Sekcja zajmująca się odrestaurowywaniem starego sprzętu, łączenie przeszłości z teraźniejszością oraz prowadzeniem działalności edukacyjnej. Dodatkowo realizowane są tutaj różne projekty elektroniczne."
+        }
+      }
+    },
+    "latest-articles": {
+      "title": "Co słychać w SKNI KOD?",
+      "subtitle": "Najnowsze artykuły"
+    },
+    "our-projects": {
+      "title": "Nasze projekty",
+      "subtitle": "Prowadzimy wiele ciekawych projektów",
+      "projects-amount": "Mamy ich już ponad",
+      "see-all": "Zobacz wszystkie!"
+    },
+    "partners": {
+      "title": "Nasi partnerzy",
+      "subtitle": "Wspierają nas"
+    },
+    "more": "Zobacz więcej"
   }
 }

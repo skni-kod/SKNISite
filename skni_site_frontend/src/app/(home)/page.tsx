@@ -1,12 +1,18 @@
-import { useTranslations } from "next-intl";
-import { Text } from "@/components/ui/text";
+import { IntroductionSection } from "@/app/(home)/(components)/sections/introduction-section";
+import { JoinUsSection } from "@/app/(home)/(components)/sections/join-us-section";
+import { LatestNewsSection } from "@/app/(home)/(components)/sections/latest-news-section";
+import { PartnersSection } from "@/app/(home)/(components)/sections/partners-section";
+import { OurProjectsSection } from "@/app/(home)/(components)/sections/our-projects-section";
 
 export default function HomePage() {
-  const t = useTranslations();
-
-  return (
-    <div className="flex h-full justify-center items-center">
-      <Text variant="h1">{t("HomePage.title")}</Text>
-    </div>
-  );
+    return (
+        <div className="flex flex-col h-full space-y-10 md:space-y-16">
+            <IntroductionSection />
+            <JoinUsSection />
+            <LatestNewsSection />
+            <OurProjectsSection />
+            <PartnersSection />
+        </div>
+    );
 }
+

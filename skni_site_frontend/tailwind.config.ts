@@ -58,6 +58,15 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      animation: {
+        slide: 'slide 20s linear infinite',
+      },
+      keyframes: {
+        slide: {
+          '0%': { left: '0' },
+          '100%': { left: '-100%' },
+        },
+      },
     },
   },
   plugins: [tailwindcss_animate],
