@@ -36,6 +36,12 @@
         }
       }
     },
+    "equipment": {
+      "title": "Potrzebujesz sprzętu?",
+      "paragraph1": "Nasze koło posiada specjalistyczny sprzęt! Druk 3D czy rozwijanie gier na platformę VR to dla nas drobnostka. Dzięki temu, że posiadamy własny sprzęt możemy bez problemu rozwijać nasze umiejętności w tych dziedzinach.",
+      "paragraph2": "Posiadamy także specjalistyczne lutownice, moduły arduino oraz raspberry, sprzęt retro, drukarkę 3D, gogle VR.",
+      "button": "Zobacz więcej"
+    },
     "latest-articles": {
       "title": "Co słychać w SKNI KOD?",
       "subtitle": "Najnowsze artykuły"
