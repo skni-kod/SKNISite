@@ -1,9 +1,9 @@
-import { IntroductionSection } from "@/app/(home)/(components)/sections/introduction-section";
-import { JoinUsSection } from "@/app/(home)/(components)/sections/join-us-section";
-import { LatestNewsSection } from "@/app/(home)/(components)/sections/latest-news-section";
-import { PartnersSection } from "@/app/(home)/(components)/sections/partners-section";
-import { OurProjectsSection } from "@/app/(home)/(components)/sections/our-projects-section";
-import { EquipmentSection } from "@/app/(home)/(components)/sections/equipment-section";
+import { IntroductionSection } from "./(components)/sections/introduction-section";
+import { JoinUsSection } from "./(components)/sections/join-us-section";
+import { EquipmentSection } from "./(components)/sections/equipment-section";
+import { LatestNewsSection } from "./(components)/sections/latest-news-section";
+import { OurProjectsSection } from "./(components)/sections/our-projects-section";
+import { PartnersSection } from "./(components)/sections/partners-section";
 
 export default function HomePage() {
   return (

@@ -1,5 +1,5 @@
 import { Text } from "@/components/ui/text";
-import { ProjectSummaryCard } from "@/app/(home)/(components)/project-summary-card";
+import { ProjectSummaryCard } from "../project-summary-card";
 import { Button } from "@/components/ui/button";
 import { AnimatedCounter } from "@/components/animated-counter";
 import { useTranslations } from "next-intl";

@@ -2,7 +2,6 @@
 
 import { Text } from "@/components/ui/text";
 import Image from "next/image";
-import IntroductionGroup from "@/../public/images/heropage/introduction.jpg";
 import { useTranslations } from "next-intl";
 
 import dynamic from "next/dynamic";
@@ -33,11 +32,12 @@ const IntroductionSection = () => {
         <div className="lg:w-1/4 sm:h-1/2 lg:h-full flex items-center justify-center relative">
           <div className="h-full w-full flex justify-center items-center z-10">
             <Image
-              src={IntroductionGroup}
+              src="/images/heropage/introduction.jpg"
               alt={"Grupa osób"}
               height={0}
               width={0}
-              className="h-full object-cover rounded-sm"
+              unoptimized
+              className="h-full w-auto object-cover rounded-sm"
             />
           </div>
           <div className="h-full w-full bg-primary absolute z-0 mt-7 ml-7 lg:mt-10 lg:ml-10 rounded-sm shadow-primary/45 shadow-lg"></div>

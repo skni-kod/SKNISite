@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { BackgroundItem } from "@/app/(home)/(components)/interactive-background/background-item";
+import { BackgroundItem } from "./background-item";
 
 const images = [
   "/images/heropage/interactive-bg/python.png",
