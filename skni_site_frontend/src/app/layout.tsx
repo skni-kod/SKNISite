@@ -37,10 +37,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={cn(
-          poppins.className,
-          `antialiased flex flex-col h-screen w-screen`,
-        )}
+        className={cn(poppins.className, `antialiased flex flex-col h-screen`)}
       >
         <NextIntlClientProvider messages={messages}>
           <TanstackQueryProvider>

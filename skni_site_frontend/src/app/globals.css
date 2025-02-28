@@ -76,6 +76,8 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  /* outline: 1px solid #f00 !important; */ /* Ja to tutaj na przyszłość zostawie XD */
+
 }
 body {
   /* 3. Add accessible line-height */

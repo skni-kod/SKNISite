@@ -2,7 +2,6 @@ import React from 'react';
 import Image from "next/image";
 import { CircleUserRound } from "lucide-react";
 import { Text } from "@/components/ui/text";
-import MissingImage from "@/../public/images/missing_photo.jpg";
 
 interface NewsItemProps {
     author: {
@@ -18,24 +17,26 @@ interface NewsItemProps {
 }
 
 const NewsItem = ({
-    author,
-    date,
-    title,
-    description,
-    mainTag,
-    readtime,
-    imageSource,
-} : NewsItemProps) => {
-    const truncatedDescription = description.length > 200 ? description.substring(0, 200) + '...' : description;
+                      author,
+                      date,
+                      title,
+                      description,
+                      mainTag,
+                      readtime,
+                      imageSource,
+                  }: NewsItemProps) => {
 
     return (
-        <div className="flex flex-col space-y-3">
-            <Image
-                src={imageSource || MissingImage}
-                height={0} width={0}
-                className="h-full w-full object-cover rounded-sm"
-                alt="Article cover"
-            />
+        <div className="flex flex-col h-full place-content-between space-y-3">
+            <div className="">
+                <Image
+                    src={imageSource || "/images/missing_photo.jpg"}
+                    width={0} height={0}
+                    unoptimized
+                    className="object-cover rounded-sm w-full h-[300px]"
+                    alt="Article cover"
+                />
+            </div>
             <div className="flex flex-row gap-x-2 items-center">
                 <CircleUserRound />
                 <Text variant="smallText" className="font-light">
@@ -45,9 +46,11 @@ const NewsItem = ({
             <Text variant="smallText" className="font-bold">
                 {title}
             </Text>
-            <Text variant="smallText" className="font-light text-justify text-foreground">
-                {truncatedDescription}
-            </Text>
+            <div className="text-justify">
+                <p className="font-light line-clamp-5">
+                    {description}
+                </p>
+            </div>
             <div className="flex flex-row gap-x-2 items-center">
                 {mainTag && (<Text variant="smallText" className="text-primary/75"> {mainTag} </Text>)}
                 {mainTag && (<Text variant="smallText"> • </Text>)}
