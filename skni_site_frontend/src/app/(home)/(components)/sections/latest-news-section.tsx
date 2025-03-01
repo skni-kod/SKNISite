@@ -9,6 +9,7 @@ interface Author {
 }
 
 interface NewsItemType {
+  id: number;
   author: Author;
   title: string;
   readtime: string;
@@ -20,6 +21,7 @@ interface NewsItemType {
 
 const newsItems: NewsItemType[] = [
   {
+    id: 1,
     author: { firstName: "Wiktor", lastName: "Mazur" },
     title: "Życzenia świąteczne",
     imageSource:
@@ -31,6 +33,7 @@ const newsItems: NewsItemType[] = [
     mainTag: "Programowanie",
   },
   {
+    id: 2,
     author: { firstName: "Anna", lastName: "Kowalska" },
     title: "Noworoczne postanowienia programisty",
     readtime: "5 minut",
@@ -40,6 +43,7 @@ const newsItems: NewsItemType[] = [
     mainTag: "Rozwój osobisty",
   },
   {
+    id: 3,
     author: { firstName: "Katarzyna", lastName: "Wójcik" },
     title: "Programowanie w chmurze – nowa era",
     readtime: "4 minuty",
@@ -49,6 +53,7 @@ const newsItems: NewsItemType[] = [
     mainTag: "Chmura",
   },
   {
+    id: 4,
     author: { firstName: "Katarzyna", lastName: "Wójcik" },
     title: "Programowanie w chmurze – nowa era",
     readtime: "4 minuty",
@@ -68,9 +73,9 @@ const LatestNewsSection = () => {
       subtitle={t("landing-page.latest-articles.subtitle")}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-6 md:gap-x-6">
-        {newsItems.map((item, index) => (
+        {newsItems.map((item) => (
           <NewsItem
-            key={index}
+            key={item.id}
             author={item.author}
             imageSource={item.imageSource}
             title={item.title}

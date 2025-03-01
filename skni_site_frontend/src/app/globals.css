@@ -76,7 +76,7 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
-  /* outline: 1px solid #f00 !important; */ /* Ja to tutaj na przyszłość zostawie XD */
+  /* outline: 1px solid #f00 !important; */ /* Na przyszłość do "debugowania" styli. Dodaje czerwony border do każdego elementu (pomaga mi w szukaniu błędu jak inspect element już nic nie poradzi) */
 
 }
 body {

@@ -73,4 +73,4 @@ const InteractiveBackground = () => {
   );
 };
 
-export default InteractiveBackground;
+export { InteractiveBackground };

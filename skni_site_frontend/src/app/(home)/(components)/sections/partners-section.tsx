@@ -1,16 +1,19 @@
-import React from 'react';
-import {SectionBoilerplate} from "@/components/section-boilerplate";
-import {InfiniteCarousel} from "@/components/infinite-carousel";
-import {useTranslations} from "next-intl";
+import React from "react";
+import { SectionBoilerplate } from "@/components/section-boilerplate";
+import { InfiniteCarousel } from "@/components/infinite-carousel/infinite-carousel";
+import { useTranslations } from "next-intl";
 
 const PartnersSection = () => {
-    const t = useTranslations()
+  const t = useTranslations();
 
-    return (
-        <SectionBoilerplate title={t("landing-page.partners.title")} subtitle={t("landing-page.partners.subtitle")}>
-            <InfiniteCarousel />
-        </SectionBoilerplate>
-    );
+  return (
+    <SectionBoilerplate
+      title={t("landing-page.partners.title")}
+      subtitle={t("landing-page.partners.subtitle")}
+    >
+      <InfiniteCarousel />
+    </SectionBoilerplate>
+  );
 };
 
 export { PartnersSection };

@@ -7,7 +7,10 @@ import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 
 const InteractiveBackground = dynamic(
-  () => import("@/app/(home)/(components)/interactive-background/"),
+  () =>
+    import(
+      "@/app/(home)/(components)/interactive-background/interactive-background"
+    ).then((module) => module.InteractiveBackground),
   { ssr: false },
 );
 
@@ -34,10 +37,9 @@ const IntroductionSection = () => {
             <Image
               src="/images/heropage/introduction.jpg"
               alt={"Grupa osób"}
-              height={0}
-              width={0}
-              unoptimized
-              className="h-full w-auto object-cover rounded-sm"
+              height={700}
+              width={300}
+              className="h-full w-full object-cover rounded-sm"
             />
           </div>
           <div className="h-full w-full bg-primary absolute z-0 mt-7 ml-7 lg:mt-10 lg:ml-10 rounded-sm shadow-primary/45 shadow-lg"></div>

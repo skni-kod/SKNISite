@@ -17,19 +17,15 @@ const BackgroundItem = ({
   positionY,
 }: BackgroundItemProps) => {
   return (
-    <div
-      key={id}
-      className="relative w-full h-full flex items-center justify-center"
-    >
+    <div className="relative w-full h-full flex items-center justify-center">
       <Image
         src={source}
         alt={`Image ${id}`}
         priority
-        unoptimized
-        width={0}
-        height={0}
+        width={96}
+        height={96}
         className={cn(
-          "w-auto h-16 opacity-45 absolute transform transition-all duration-300 ease-out",
+          "opacity-45 absolute transform transition-all duration-300 ease-out",
           className,
         )}
         style={{

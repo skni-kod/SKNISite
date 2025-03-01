@@ -37,7 +37,10 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={cn(poppins.className, `antialiased flex flex-col h-screen`)}
+        className={cn(
+          poppins.className,
+          `antialiased flex flex-col overflow-x-hidden`,
+        )}
       >
         <NextIntlClientProvider messages={messages}>
           <TanstackQueryProvider>
@@ -47,7 +50,7 @@ export default async function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              <div className="flex flex-col h-full w-full px-6 mx-auto max-w-screen-xl">
+              <div className="flex flex-col w-full px-6 mx-auto max-w-screen-xl h-screen">
                 <Navbar />
                 {children}
               </div>
