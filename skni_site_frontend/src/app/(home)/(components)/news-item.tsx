@@ -40,9 +40,8 @@ const NewsItem = ({
         <CircleUserRound />
         <Text variant="smallText" className="font-light">
           <span className="font-medium">
-            {" "}
-            {author.firstName.at(0)}. {author.lastName}{" "}
-          </span>{" "}
+            {author.firstName.at(0)}. {author.lastName}
+          </span>
           • <span className="italic"> {date} </span>
         </Text>
       </div>
@@ -55,14 +54,12 @@ const NewsItem = ({
       <div className="flex flex-row gap-x-2 items-center">
         {mainTag && (
           <Text variant="smallText" className="text-primary/75">
-            {" "}
-            {mainTag}{" "}
+            {mainTag}
           </Text>
         )}
         {mainTag && <Text variant="smallText"> • </Text>}
         <Text variant="smallText" className="font-extralight">
-          {" "}
-          {readtime}{" "}
+          {readtime}
         </Text>
       </div>
     </div>

@@ -10,13 +10,13 @@ const EquipmentSection = () => {
 
   return (
     <section className="min-h-[600px] flex w-full justify-center items-center">
-      <div className="absolute left-0 z-0 w-screen">
+      <div className="absolute left-0 z-0">
         <Image
           src="/images/heropage/equipment.jpg"
           alt="Equipment background"
           width={1000}
           height={600}
-          className="object-cover object-center h-[600px] w-full"
+          className="object-cover object-center h-[600px] w-screen"
           priority
         />
       </div>
