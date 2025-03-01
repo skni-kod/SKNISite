@@ -76,6 +76,8 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  /* outline: 1px solid #f00 !important; */ /* Na przyszłość do "debugowania" styli. Dodaje czerwony border do każdego elementu (pomaga mi w szukaniu błędu jak inspect element już nic nie poradzi) */
+
 }
 body {
   /* 3. Add accessible line-height */
@@ -109,3 +111,4 @@ h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
