@@ -1,0 +1,5 @@
+[tools]
+node = "22"
+pre-commit = "4.1.0"
+python = "3.12"
+ruff = "0.9.9"

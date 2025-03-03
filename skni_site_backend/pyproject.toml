@@ -3,7 +3,7 @@ name = "sknisite"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Your Name",email = "you@example.com"}
+    { name = "Your Name", email = "you@example.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
@@ -17,3 +17,26 @@ dependencies = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+extend-exclude = [
+    "manage.py",
+    "**/migrations",
+    "**/__init__.py",
+]
+lint.ignore = ["Q000", "Q003"]  # Disable conflicting quote style rules
+lint.select = [
+    "E", # pycodestyle errors
+    "F", # pyflakes
+    "I", # isort
+    "N", # pep8-naming
+    "W", # pycodestyle warnings
+    "B", # flake8-bugbear
+    "C", # flake8-comprehensions
+    "Q", # flake8-quotes
+    "S", # flake8-security
+]
+lint.per-file-ignores = { "**/tests/**/*.py" = ["S101"] }
+format.quote-style = "single"
