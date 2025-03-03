@@ -34,10 +34,17 @@ export default async function RootLayout({
 
   // "server rendered HTML didn't match the client properties"
   // https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
+  
+  // test commit
+  
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={cn(poppins.className, `antialiased flex flex-col`)}>
         <NextIntlClientProvider messages={messages}>
+		
+		
+		
+		
           <TanstackQueryProvider>
             <ThemeProvider
               attribute="class"
@@ -45,7 +52,15 @@ export default async function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
+			
+			
+			
+			
               <div className="flex flex-col w-full px-6 mx-auto max-w-screen-xl">
+			  
+			  
+			  
+			  
                 <Navbar />
                 {children}
               </div>
