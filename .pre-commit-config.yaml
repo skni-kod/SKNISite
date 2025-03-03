@@ -41,7 +41,7 @@ repos:
         language: system
       - name: skni_site_frontend linting
         id: ui-lint
-        entry: bash -c "cd skni_site_frontend && npm install"
+        entry: bash -c "cd skni_site_frontend && npm install npm lint-staged"
         files: ^skni_site_frontend/
         language: system
       - name: skni_site_frontend type checking
