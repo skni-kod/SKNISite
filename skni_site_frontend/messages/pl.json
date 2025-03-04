@@ -57,5 +57,19 @@
       "subtitle": "Wspierają nas"
     },
     "more": "Zobacz więcej"
+  },
+  "about-us-page": {
+    "introduction": {
+      "title": "Czym się zajmujemy?",
+      "subtitle": "O Studenckim Kole Naukowym Informatyków \"KOD\"",
+      "p1": "Koło skupia głównie studentów kierunku Informatyka Wydziału Elektrotechniki i Informatyki i od początku działalności udaje się zachęcić do czynnego udziału w pracach Koła już studentów pierwszych lat studiów. ",
+      "p2": "Celem pracy Koła jest poszerzenie wiedzy z dziedziny optymalnego rozwiązywania zagadnień programowania oraz poznawanie nowoczesnych technologii informatycznych. W ramach regularnych spotkań studenci samodzielnie przygotowują referaty oraz organizują wewnętrzne współzawodnictwo w rozwiązywaniu interesujących ich zagadnień. ",
+      "p3": "Członkowie Koła mają możliwość testowania nowoczesnego oprogramowania systemowego i sieciowego, a także obsługi własnych serwerów. W ramach Koła działa Rzeszowska Grupa .NET, zajmująca się technologiami programistycznymi firmy Microsoft. ",
+      "p4": "Efektem pracy Koła jest udział w zawodach informatycznych, takich jak Imagine Cup, Akademickie Mistrzostwa w Programowaniu Zespołowym, a także udział w ogólnopolskich konferencjach dla młodych pracowników nauki i studentów. "
+    },
+    "timeline": {
+      "title": "O nas",
+      "subtitle": "Historia koła"
+    }
   }
 }
