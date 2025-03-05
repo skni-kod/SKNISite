@@ -3,30 +3,35 @@ import { EventDirection } from "@/interfaces/timeline";
 import { cn } from "@/lib/utils";
 
 interface EventDateProps {
-  day?: number;
-  month?: number;
-  year: number;
+  date: {
+    day?: number;
+    month?: number;
+    year: number;
+  };
   direction: EventDirection;
+  className?: string;
 }
 
-const EventDate = ({ day, month, year, direction }: EventDateProps) => {
-  let date = "";
+const EventDate = ({ date, direction, className }: EventDateProps) => {
+  let eventDate = "";
 
-  if (day && month) {
-    date = `${day}.${month}.${year}`;
-  } else if (month) {
-    date = `${month}.${year}`;
+  if (date.day && date.month) {
+    eventDate = `${date.day}.${date.month}.${date.year}`;
+  } else if (date.month) {
+    eventDate = `${date.month}.${date.year}`;
   } else {
-    date = `${year}`;
+    eventDate = `${date.year}`;
   }
   return (
-    <div
-      className={cn(
-        "h-full w-full flex items-center",
-        direction === "left" ? "justify-end" : "justify-start",
-      )}
-    >
-      <Text variant="largeText">{date}</Text>
+    <div className={cn("hidden md:flex md:col-span-2", className)}>
+      <div
+        className={cn(
+          "h-full w-full flex items-center",
+          direction === "left" ? "justify-end" : "justify-start",
+        )}
+      >
+        <Text variant="largeText">{eventDate}</Text>
+      </div>
     </div>
   );
 };

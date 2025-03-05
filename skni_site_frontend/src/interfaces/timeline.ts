@@ -23,4 +23,5 @@ export interface TimelineEventDetailsProps {
   title: string;
   description: string;
   direction: EventDirection;
+  className?: string;
 }
