@@ -8,6 +8,7 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar/navbar";
+import {Footer} from "@/components/footer/footer";
 
 export const metadata: Metadata = {
   title: "SKNI KOD",
@@ -48,6 +49,7 @@ export default async function RootLayout({
               <div className="flex flex-col w-full px-6 mx-auto max-w-screen-xl">
                 <Navbar />
                 {children}
+                <Footer />
               </div>
             </ThemeProvider>
           </TanstackQueryProvider>

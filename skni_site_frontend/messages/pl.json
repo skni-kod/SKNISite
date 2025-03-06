@@ -11,6 +11,9 @@
       "system": "Systemowy"
     }
   },
+  "footer": {
+    "copyright": "Wszystkie prawa zastrzeżone"
+  },
   "landing-page": {
     "introduction": {
       "name": "Studenckie Koło Naukowe Informatyków",
