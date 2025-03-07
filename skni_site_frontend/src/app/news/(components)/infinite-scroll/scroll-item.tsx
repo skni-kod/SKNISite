@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Text } from "@/components/ui/text";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface ScrollItemProps {
   id: number;
@@ -10,6 +11,8 @@ interface ScrollItemProps {
 }
 
 const ScrollItem = ({ id, title, description, imageUrl }: ScrollItemProps) => {
+  const t = useTranslations("news-page");
+
   return (
     <Link href={`/news/article/${id}`}>
       <div className="flex flex-col md:flex-row bg-accent border rounded-2xl h-[500px] p-5 gap-x-10 items-center justify-center shadow-lg shadow-secondary">
@@ -25,7 +28,7 @@ const ScrollItem = ({ id, title, description, imageUrl }: ScrollItemProps) => {
         <div className="w-full md:w-1/2 h-full overflow-hidden rounded-lg order-1 md:order-2">
           <Image
             src={imageUrl}
-            alt={`Article ${id}`}
+            alt={`${t("article-nr")} ${id}`}
             width={500}
             height={500}
             className="w-full h-full object-cover"

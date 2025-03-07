@@ -3,8 +3,11 @@
 import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 const BackToTopButton = () => {
+  const t = useTranslations("news-page");
+
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
@@ -26,7 +29,7 @@ const BackToTopButton = () => {
         <Button
           onClick={scrollToTop}
           className="rounded-full shadow-lg transition-all flex items-center justify-center w-12 h-12"
-          aria-label="Wróć na górę"
+          aria-label={t("back-to-the-top")}
         >
           <ArrowUp className="w-full h-full" />
         </Button>
