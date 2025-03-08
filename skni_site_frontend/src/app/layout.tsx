@@ -8,7 +8,7 @@ import { Poppins } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar/navbar";
-import {Footer} from "@/components/footer/footer";
+import { Footer } from "@/components/footer/footer";
 
 export const metadata: Metadata = {
   title: "SKNI KOD",
@@ -37,7 +37,12 @@ export default async function RootLayout({
   // https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={cn(poppins.className, `antialiased flex flex-col`)}>
+      <body
+        className={cn(
+          poppins.className,
+          `antialiased flex flex-col min-h-screen`,
+        )}
+      >
         <NextIntlClientProvider messages={messages}>
           <TanstackQueryProvider>
             <ThemeProvider
@@ -46,9 +51,9 @@ export default async function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              <div className="flex flex-col w-full px-6 mx-auto max-w-screen-xl">
+              <div className="flex flex-col min-h-screen w-full px-6 mx-auto max-w-screen-xl">
                 <Navbar />
-                {children}
+                <main className="flex-grow h-full">{children}</main>
                 <Footer />
               </div>
             </ThemeProvider>
