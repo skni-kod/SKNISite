@@ -22,7 +22,7 @@ const footerItems = [
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col justify-center sm:flex-row sm:justify-between items-center my-4 gap-y-5 sm:gap-y-0">
+    <footer className="w-full flex flex-col justify-center sm:flex-row sm:justify-between items-center my-4 gap-y-5 sm:gap-y-0 ">
       <div className="flex flex-row gap-x-3">
         {footerItems.map((item, index) => (
           <FooterItem

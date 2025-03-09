@@ -7,7 +7,7 @@ import { PartnersSection } from "./(components)/sections/partners-section";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col h-full space-y-10 md:space-y-16">
+    <div className="flex flex-col h-full space-y-10 md:space-y-28">
       <IntroductionSection />
       <JoinUsSection />
       <EquipmentSection />
