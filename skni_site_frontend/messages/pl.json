@@ -1,4 +1,35 @@
 {
+  "auth": {
+    "register": {
+      "title": "Rejestracja",
+      "subtitle": "Załóż własne konto aby skorzystać z panelu admina.",
+      "form": {
+        "name": "Imie",
+        "surname": "Nazwisko",
+        "email": "Adres e-mail",
+        "password": "Hasło",
+        "confirmPassword": "Powtórz hasło"
+      },
+      "hasAccount": {
+        "text": "Masz już konto?",
+        "redirect": "Zaloguj się"
+      },
+      "button": "Zarejestruj się"
+    },
+    "login": {
+      "title": "Logowanie",
+      "subtitle": "Zaloguj się, aby uzyskać dostęp do panelu admina.",
+      "form": {
+        "email": "Adres e-mail",
+        "password": "Hasło"
+      },
+      "hasNoAccount": {
+        "text": "Nie masz konta?",
+        "redirect": "Stwórz je"
+      },
+      "button": "Zaloguj się"
+    }
+  },
   "Navbar": {
     "about": "O nas",
     "news": "Aktualności",

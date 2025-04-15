@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 const InteractiveBackground = dynamic(
   () =>
     import(
-      "@/app/(home)/(components)/interactive-background/interactive-background"
+      "@/app/(public)/(home)/(components)/interactive-background/interactive-background"
     ).then((module) => module.InteractiveBackground),
   { ssr: false },
 );
