@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Text } from "@/components/ui/text";
+import { useTranslations } from "next-intl";
 
 type GalleryImage = {
   src: string;
@@ -12,9 +13,11 @@ interface GalleryProps {
 }
 
 const Gallery = ({ images }: GalleryProps) => {
+  const t = useTranslations("project-details");
+
   return (
     <section className="space-y-4">
-      <Text variant="h2">Galeria</Text>
+      <Text variant="h2">{t("gallery")}</Text>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-0">
         {images.map((image, index) => (
           <div key={index} className="overflow-hidden rounded-lg border">

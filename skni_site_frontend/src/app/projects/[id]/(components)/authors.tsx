@@ -3,15 +3,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { Text } from "@/components/ui/text";
 import { ProjectAuthor } from "@/interfaces/project-author";
+import { useTranslations } from "next-intl";
 
 interface AuthorsProps {
   authors: ProjectAuthor[];
 }
 
 const Authors = ({ authors }: AuthorsProps) => {
+  const t = useTranslations("project-details");
+
   return (
     <section className="space-y-4">
-      <Text variant="h2">Autorzy</Text>
+      <Text variant="h2">{t("authors")}</Text>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {authors.map((author, index) => (
           <Card key={index} className="overflow-hidden">
