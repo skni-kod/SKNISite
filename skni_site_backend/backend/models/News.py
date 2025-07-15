@@ -1,11 +1,12 @@
 from django.db import models
 
-from skni_site_backend.backend.models import TimeStampedModel, User
+from .utils import TimeStampedModel
+from backend.utils.storage import default_storage
 
 
 class NewsImage(TimeStampedModel):
-    news = models.ForeignKey("Article", on_delete=models.CASCADE)
-    image = models.ImageField(upload_to="article_images/")
+    news = models.ForeignKey("News", on_delete=models.CASCADE, related_name="images")
+    image = models.ImageField(upload_to="article_images/", storage=default_storage)
     alt = models.CharField(max_length=255)
 
     def __str__(self):
@@ -15,8 +16,10 @@ class NewsImage(TimeStampedModel):
 class News(TimeStampedModel):
     title = models.CharField(max_length=255)
     text = models.TextField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to="articles/", null=True, blank=True)
+    author = models.ForeignKey("User", on_delete=models.CASCADE, related_name="news")
+    image = models.ImageField(
+        upload_to="news/", null=True, blank=True, storage=default_storage
+    )
 
     def __str__(self):
         return self.title

@@ -1,6 +1,6 @@
 from django.db import models
 
-from skni_site_backend.backend.models import TimeStampedModel
+from .utils import TimeStampedModel
 
 
 class Section(TimeStampedModel):
