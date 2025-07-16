@@ -83,5 +83,11 @@
     "end": "Osiągnałeś koniec postów! Niesamowite.",
     "back-to-the-top": "Wróć na górę",
     "article-nr": "Artykuł nr."
+  },
+  "project-details": {
+    "authors": "Autorzy",
+    "description": "Opis",
+    "usedTechnologies": "Użyte technologie",
+    "gallery": "Galeria zdjęć"
   }
 }
