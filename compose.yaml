@@ -5,6 +5,9 @@ services:
       - '8000:8000'
     networks:
       - skni_site
+    volumes:
+      - static_volume:/app/static
+      - media_volume:/app/media
     develop:
       watch:
         - action: sync
@@ -14,9 +17,24 @@ services:
           path: ./skni_site_backend/poetry.lock
         - action: rebuild
           path: ./skni_site_backend/pyproject.toml
+    environment:
+      - CONTAINER=true
     depends_on:
       db:
         condition: service_healthy
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - static_volume:/app/static
+      - media_volume:/app/media
+    depends_on:
+      - backend
+    networks:
+      - skni_site
   db:
     image: postgres:15.7
     ports:
@@ -35,21 +53,23 @@ services:
       timeout: 10s
     networks:
       - skni_site
-  frontend:
-    container_name: sknisite.ui.next
-    build:
-      context: ./skni_site_frontend
-      dockerfile: ./Dockerfile
-    ports:
-      - '8001:3000'
-    networks:
-      - skni_site
-    depends_on:
-      backend:
-        condition: service_started
+#  frontend:
+#    container_name: sknisite.ui.next
+#    build:
+#      context: ./skni_site_frontend
+#      dockerfile: ./Dockerfile
+#    ports:
+#      - '8001:3000'
+#    networks:
+#      - skni_site
+#    depends_on:
+#      backend:
+#        condition: service_started
 
 volumes:
   skni_site_db_data:
+  static_volume:
+  media_volume:
 
 networks:
   skni_site:
